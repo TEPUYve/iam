@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>José M. Figueredo A. — Fundador TEPUY | iam.tepuy.site</title>
+  <meta name="description"
+    content="Ingeniero en Informática, fundador de TEPUY. Experto en cloud, ciberseguridad, Inteligencia Artificial y esgrima. Todo es un sistema — yo los hago funcionar." />
+  <meta name="author" content="José M. Figueredo A." />
+  <meta name="keywords"
+    content="TEPUY, José Figueredo, ingeniero en informática, cloud AWS, ciberseguridad, inteligencia artificial, esgrima, Venezuela, Lara" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="José M. Figueredo A. — iam.tepuy.site" />
+  <meta property="og:description"
+    content="Ingeniero en Informática. Fundador de TEPUY. Todo es un sistema — yo los hago funcionar." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://iam.tepuy.site" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://iam.tepuy.site" />
+
+  <!-- Favicon (text emoji fallback) -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+  <nav class="nav" id="navbar" role="navigation" aria-label="Navegación principal">
+    <a href="#hero" class="nav-logo" aria-label="Inicio">
+      IAM · TEPUY<span class="cursor" aria-hidden="true"></span>
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#about" data-i18n="nav.about">Sobre Mí</a></li>
+      <li><a href="#systems" data-i18n="nav.systems">Sistemas</a></li>
+      <li><a href="#project" data-i18n="nav.project">Proyecto</a></li>
+      <li><a href="#brands" data-i18n="nav.brands">Marcas</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
+    </ul>
+
+    <!-- Language Toggle -->
+    <div class="lang-toggle" id="langToggle" role="switch" aria-checked="false" aria-label="Cambiar idioma"
+      tabindex="0">
+      <span class="lang-option active" id="langES">ES</span>
+      <span class="lang-option" id="langEN">EN</span>
+    </div>
+
+    <!-- Hamburger -->
+    <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <nav class="nav-drawer" id="navDrawer" aria-label="Menú móvil">
+    <a href="#about" data-i18n="nav.about" class="drawer-link">Sobre Mí</a>
+    <a href="#systems" data-i18n="nav.systems" class="drawer-link">Sistemas</a>
+    <a href="#project" data-i18n="nav.project" class="drawer-link">Proyecto</a>
+    <a href="#brands" data-i18n="nav.brands" class="drawer-link">Marcas</a>
+    <a href="#contact" data-i18n="nav.contact" class="drawer-link">Contacto</a>
+  </nav>
+
+
+  <!-- ============================================================
+     HERO
+     ============================================================ -->
+  <section class="hero" id="hero" aria-labelledby="hero-heading">
+
+    <!-- Animated System Diagram -->
+    <div class="hero-diagram" aria-hidden="true">
+      <svg viewBox="0 0 600 480" xmlns="http://www.w3.org/2000/svg" id="systemDiagram">
+        <defs>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+            <feMerge>
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+          <filter id="glowBronze">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+            <feMerge>
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+
+        <!-- ─── Connection Lines (drawn via CSS animation) ─── -->
+        <!-- Center: 300, 240 -->
+
+        <!-- Line to Cloud (100, 100) -->
+        <line class="diagram-line line-1" x1="300" y1="240" x2="100" y2="100" stroke="#7DD3FC" stroke-width="1.5"
+          stroke-dasharray="245" stroke-dashoffset="245" opacity="0.7" />
+        <!-- Line to Cyber (500, 100) -->
+        <line class="diagram-line line-2" x1="300" y1="240" x2="500" y2="100" stroke="#7DD3FC" stroke-width="1.5"
+          stroke-dasharray="245" stroke-dashoffset="245" opacity="0.7" />
+        <!-- Line to AI (100, 380) -->
+        <line class="diagram-line line-3" x1="300" y1="240" x2="100" y2="380" stroke="#7DD3FC" stroke-width="1.5"
+          stroke-dasharray="245" stroke-dashoffset="245" opacity="0.7" />
+        <!-- Line to Fencing (500, 380) -->
+        <line class="diagram-line line-4" x1="300" y1="240" x2="500" y2="380" stroke="#7DD3FC" stroke-width="1.5"
+          stroke-dasharray="245" stroke-dashoffset="245" opacity="0.7" />
+
+        <!-- ─── Satellite Nodes ─── -->
+
+        <!-- Cloud & AWS -->
+        <g class="satellite-node node-1" transform="translate(100, 100)">
+          <circle r="44" fill="#0D1E35" stroke="#7DD3FC" stroke-width="1.5" opacity="0.9" />
+          <circle r="44" fill="none" stroke="#7DD3FC" stroke-width="0.5" opacity="0.3" stroke-dasharray="4 4" />
+          <text y="-8" text-anchor="middle" font-size="22" fill="#7DD3FC">☁️</text>
+          <text y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#9FB3C8"
+            letter-spacing="0.08em">CLOUD</text>
+        </g>
+
+        <!-- Ciberseguridad -->
+        <g class="satellite-node node-2" transform="translate(500, 100)">
+          <circle r="44" fill="#0D1E35" stroke="#7DD3FC" stroke-width="1.5" opacity="0.9" />
+          <circle r="44" fill="none" stroke="#7DD3FC" stroke-width="0.5" opacity="0.3" stroke-dasharray="4 4" />
+          <text y="-8" text-anchor="middle" font-size="22" fill="#7DD3FC">🔒</text>
+          <text y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#9FB3C8"
+            letter-spacing="0.08em">CYBER</text>
+        </g>
+
+        <!-- Inteligencia Artificial -->
+        <g class="satellite-node node-3" transform="translate(100, 380)">
+          <circle r="44" fill="#0D1E35" stroke="#7DD3FC" stroke-width="1.5" opacity="0.9" />
+          <circle r="44" fill="none" stroke="#7DD3FC" stroke-width="0.5" opacity="0.3" stroke-dasharray="4 4" />
+          <text y="-8" text-anchor="middle" font-size="22" fill="#7DD3FC">🤖</text>
+          <text y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#9FB3C8"
+            letter-spacing="0.08em">AI / ML</text>
+        </g>
+
+        <!-- Esgrima -->
+        <g class="satellite-node node-4" transform="translate(500, 380)">
+          <circle r="44" fill="#0D1E35" stroke="#C08552" stroke-width="1.5" opacity="0.9" />
+          <circle r="44" fill="none" stroke="#C08552" stroke-width="0.5" opacity="0.3" stroke-dasharray="4 4" />
+          <text y="-8" text-anchor="middle" font-size="22" fill="#C08552">🤺</text>
+          <text y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#9FB3C8"
+            letter-spacing="0.08em" data-i18n="hero.svg-fencing">ESGRIMA</text>
+        </g>
+
+        <!-- ─── Central Node ─── -->
+        <g class="central-node" transform="translate(300, 240)" filter="url(#glow)">
+          <!-- Outer ring -->
+          <circle r="68" fill="none" stroke="#7DD3FC" stroke-width="1" stroke-dasharray="6 3" opacity="0.4">
+            <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="30s"
+              repeatCount="indefinite" />
+          </circle>
+          <!-- Inner ring -->
+          <circle r="55" fill="none" stroke="#C08552" stroke-width="0.75" stroke-dasharray="4 4" opacity="0.5">
+            <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="20s"
+              repeatCount="indefinite" />
+          </circle>
+          <!-- Core -->
+          <circle r="44" fill="#0A1628" stroke="#7DD3FC" stroke-width="2" />
+          <!-- Label -->
+          <text y="-6" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="700"
+            fill="#F5F7FA" letter-spacing="-0.02em">JMFA</text>
+          <text y="12" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#9FB3C8"
+            letter-spacing="0.12em" data-i18n="hero.svg-engineer">INGENIERO</text>
+        </g>
+
+        <!-- Blueprint cross-hair marks at extremities -->
+        <g opacity="0.3" stroke="#7DD3FC" stroke-width="0.75">
+          <line x1="10" y1="0" x2="10" y2="20" />
+          <line x1="0" y1="10" x2="20" y2="10" />
+          <line x1="580" y1="0" x2="580" y2="20" />
+          <line x1="570" y1="10" x2="590" y2="10" />
+          <line x1="10" y1="460" x2="10" y2="480" />
+          <line x1="0" y1="470" x2="20" y2="470" />
+          <line x1="580" y1="460" x2="580" y2="480" />
+          <line x1="570" y1="470" x2="590" y2="470" />
+        </g>
+
+        <!-- Coordinates labels (blueprint style) -->
+        <text x="10" y="496" font-family="'JetBrains Mono', monospace" font-size="8" fill="#4A6480"
+          letter-spacing="0.1em">X:0.000 Y:0.000</text>
+        <text x="480" y="496" font-family="'JetBrains Mono', monospace" font-size="8" fill="#4A6480"
+          letter-spacing="0.1em">REV.2.0</text>
+      </svg>
+    </div>
+
+    <!-- Hero Text Content -->
+    <div class="hero-content">
+      <p class="hero-tag" data-i18n="hero.tag">Fundador · Ingeniero · Creador</p>
+      <h1 id="hero-heading">
+        <span data-i18n="hero.h1a">Todo es un sistema.</span><br />
+        <em data-i18n="hero.h1b">Yo los hago funcionar.</em>
+      </h1>
+      <p class="hero-sub" data-i18n="hero.sub">
+        Ingeniero en Informática · MSc. Redes de Computadoras · Fundador de TEPUY.
+        Diagnostico y construyo sistemas — desde arquitecturas cloud
+        hasta redes MikroTik y pistas de esgrima.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://tepuy.site/agenda" target="_blank" rel="noopener" class="btn btn-primary" id="cta-agenda"
+          data-i18n="hero.cta1">
+          📅 Agendar Cita
+        </a>
+        <a href="https://tepuy.site/whatsapp" target="_blank" rel="noopener" class="btn btn-secondary" id="cta-wa"
+          data-i18n="hero.cta2">
+          💬 WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+     ABOUT
+     ============================================================ -->
+  <section id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Avatar column -->
+        <div class="about-avatar reveal-left">
+          <div class="avatar-frame" aria-hidden="true">
+            <div class="avatar-initials">JF</div>
+          </div>
+          <p class="about-role" data-i18n="about.role">Fundador &amp; CEO · TEPUY</p>
+        </div>
+
+        <!-- Content column -->
+        <div class="about-content">
+          <p class="section-label" data-i18n="about.label">Sobre Mí</p>
+          <h2 id="about-heading" class="reveal">
+            José M. <span class="cyan">Figueredo</span> A.
+          </h2>
+
+          <p class="about-bio reveal delay-1" data-i18n="about.bio">
+            Soy un <strong>Ingeniero en Informática</strong> con Maestría en Redes de Computadoras (UCLA)
+            y certificaciones en <strong>AWS</strong>. Fundé <strong>TEPUY</strong> para llevar
+            infraestructura tecnológica robusta a empresas y emprendedores. Mi enfoque es sistémico:
+            cada problema — tecnológico o deportivo — tiene una lógica interna
+            que hay que <em>diagnosticar, entender y hacer funcionar</em>.
+          </p>
+
+          <p class="about-bio reveal delay-2" data-i18n="about.bio2">
+            Apasionado por la <strong>Inteligencia Artificial</strong> y el apoyo tecnológico al
+            <strong>Club de Esgrima Cabudare</strong> donde acompaño el desarrollo de mi hija.
+          </p>
+
+          <!-- Tech Tags -->
+          <div class="tags reveal delay-3">
+            <span class="tag">AWS</span>
+            <span class="tag">MikroTik</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Cisco</span>
+            <span class="tag">Linux</span>
+            <span class="tag">Python</span>
+            <span class="tag">LLMs / IA</span>
+            <span class="tag">VMware</span>
+            <span class="tag bronze-tag">Esgrima</span>
+          </div>
+
+          <!-- Education Badges -->
+          <div class="edu-badges reveal delay-4">
+            <div class="edu-badge">
+              <span class="edu-badge-icon">🎓</span>
+              <div class="edu-badge-text">
+                <div class="edu-badge-title" data-i18n="about.edu1.title">Ing. en Informática</div>
+                <div class="edu-badge-sub" data-i18n="about.edu1.sub">UCLA · Barquisimeto, Venezuela</div>
+              </div>
+            </div>
+            <div class="edu-badge">
+              <span class="edu-badge-icon">🎓</span>
+              <div class="edu-badge-text">
+                <div class="edu-badge-title" data-i18n="about.edu2.title">MSc. Redes de Computadoras</div>
+                <div class="edu-badge-sub" data-i18n="about.edu2.sub">UCLA · Posgrado en Telecomunicaciones</div>
+              </div>
+            </div>
+            <div class="edu-badge">
+              <span class="edu-badge-icon">☁️</span>
+              <div class="edu-badge-text">
+                <div class="edu-badge-title" data-i18n="about.edu3.title">AWS Certified</div>
+                <div class="edu-badge-sub" data-i18n="about.edu3.sub">Amazon Web Services</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+     SYSTEMS
+     ============================================================ -->
+  <section id="systems" aria-labelledby="systems-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label" data-i18n="systems.label">Sistemas</p>
+        <h2 id="systems-heading" class="reveal" data-i18n="systems.heading">
+          Sistemas que <span class="cyan">Diagnostico</span>
+        </h2>
+      </div>
+
+      <div class="systems-grid">
+
+        <!-- 01 Cloud -->
+        <div class="system-card reveal delay-1">
+          <div class="system-card-bg"></div>
+          <span class="system-icon">☁️</span>
+          <span class="system-num">01 · CLOUD</span>
+          <h3 data-i18n="sys1.title">Cloud &amp; Infraestructura</h3>
+          <p data-i18n="sys1.desc">Diseño y administración de arquitecturas cloud en AWS. Servidores, virtualización,
+            contenedores Docker, backup y disaster recovery. Tu infraestructura siempre activa.</p>
+          <div class="system-tags">
+            <span class="system-tag">AWS</span>
+            <span class="system-tag">EC2</span>
+            <span class="system-tag">S3</span>
+            <span class="system-tag">Docker</span>
+            <span class="system-tag">VMware</span>
+          </div>
+        </div>
+
+        <!-- 02 Cyber -->
+        <div class="system-card reveal delay-2">
+          <div class="system-card-bg"></div>
+          <span class="system-icon">🔒</span>
+          <span class="system-num">02 · CYBER</span>
+          <h3 data-i18n="sys2.title">Ciberseguridad &amp; Redes</h3>
+          <p data-i18n="sys2.desc">Diseño de redes seguras, firewalls, VPNs y gestión de infraestructura MikroTik y
+            Cisco. Protejo la conectividad y los datos de tu organización.</p>
+          <div class="system-tags">
+            <span class="system-tag">MikroTik</span>
+            <span class="system-tag">Cisco</span>
+            <span class="system-tag">VPN</span>
+            <span class="system-tag">Firewall</span>
+            <span class="system-tag">VLAN</span>
+          </div>
+        </div>
+
+        <!-- 03 AI -->
+        <div class="system-card reveal delay-3">
+          <div class="system-card-bg"></div>
+          <span class="system-icon">🤖</span>
+          <span class="system-num">03 · AI</span>
+          <h3 data-i18n="sys3.title">Inteligencia Artificial</h3>
+          <p data-i18n="sys3.desc">Apasionado por la IA aplicada: automatización de procesos, LLMs, prompt engineering y
+            soluciones inteligentes para negocios. La IA es la nueva electricidad.</p>
+          <div class="system-tags">
+            <span class="system-tag">LLMs</span>
+            <span class="system-tag">Gemini</span>
+            <span class="system-tag">ChatGPT</span>
+            <span class="system-tag">Automation</span>
+          </div>
+        </div>
+
+        <!-- 04 Fencing -->
+        <div class="system-card reveal delay-4">
+          <div class="system-card-bg"></div>
+          <span class="system-icon">🤺</span>
+          <span class="system-num">04 · ESGRIMA</span>
+          <h3 data-i18n="sys6.title">Esgrima &amp; Club</h3>
+          <p data-i18n="sys6.desc">Responsable tecnológico del Club de Esgrima Cabudare. Web, comunicaciones, registros
+            digitales — y papá orgulloso de una esgrimista que compite y gana.</p>
+          <div class="system-tags">
+            <span class="system-tag">Web</span>
+            <span class="system-tag">Gestión</span>
+            <span class="system-tag">Cabudare</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+     PROJECT HIGHLIGHT — Club Esgrima Cabudare
+     ============================================================ -->
+  <section id="project" aria-labelledby="project-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label" data-i18n="project.label">Proyecto Destacado</p>
+        <h2 id="project-heading" class="reveal" data-i18n="project.heading">
+          Club de Esgrima <span class="bronze">Cabudare</span>
+        </h2>
+      </div>
+
+      <div class="project-banner reveal">
+        <!-- Visual -->
+        <div class="project-visual" aria-hidden="true">
+          <svg class="fencing-svg" viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Pista blueprint -->
+            <rect x="10" y="80" width="260" height="40" fill="none" stroke="#7DD3FC" stroke-width="1" opacity="0.4" />
+            <!-- Center line -->
+            <line x1="140" y1="70" x2="140" y2="130" stroke="#7DD3FC" stroke-width="1.5" opacity="0.6" />
+            <!-- En-garde lines -->
+            <line x1="100" y1="70" x2="100" y2="130" stroke="#7DD3FC" stroke-width="1" opacity="0.4" />
+            <line x1="180" y1="70" x2="180" y2="130" stroke="#7DD3FC" stroke-width="1" opacity="0.4" />
+            <!-- End lines -->
+            <line x1="10" y1="70" x2="10" y2="130" stroke="#7DD3FC" stroke-width="1.5" opacity="0.5" />
+            <line x1="270" y1="70" x2="270" y2="130" stroke="#7DD3FC" stroke-width="1.5" opacity="0.5" />
+
+            <!-- Fencer 1 (left, bronze) -->
+            <g transform="translate(80, 100)" stroke="#C08552" stroke-width="2" fill="none">
+              <!-- Body -->
+              <circle cx="0" cy="-30" r="6" fill="#0A1628" stroke="#C08552" />
+              <line x1="0" y1="-24" x2="0" y2="-5" />
+              <line x1="0" y1="-18" x2="-12" y2="-10" />
+              <line x1="0" y1="-18" x2="18" y2="-14" />
+              <line x1="0" y1="-5" x2="-8" y2="10" />
+              <line x1="0" y1="-5" x2="8" y2="10" />
+              <!-- Saber (extended forward) -->
+              <line x1="18" y1="-14" x2="50" y2="-18" stroke-width="1.5" />
+            </g>
+
+            <!-- Fencer 2 (right, cyan) -->
+            <g transform="translate(200, 100) scale(-1,1)" stroke="#7DD3FC" stroke-width="2" fill="none">
+              <circle cx="0" cy="-30" r="6" fill="#0A1628" stroke="#7DD3FC" />
+              <line x1="0" y1="-24" x2="0" y2="-5" />
+              <line x1="0" y1="-18" x2="-12" y2="-10" />
+              <line x1="0" y1="-18" x2="18" y2="-14" />
+              <line x1="0" y1="-5" x2="-8" y2="10" />
+              <line x1="0" y1="-5" x2="8" y2="10" />
+              <line x1="18" y1="-14" x2="50" y2="-18" stroke-width="1.5" />
+            </g>
+
+            <!-- Blueprint labels -->
+            <text x="140" y="155" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8"
+              fill="#4A6480" letter-spacing="0.1em" data-i18n="project.svg-title">CLUB ESGRIMA CABUDARE</text>
+            <text x="140" y="168" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7"
+              fill="#4A6480" letter-spacing="0.08em">PISTA REG. — 14m × 1.5m</text>
+
+            <!-- Corner marks -->
+            <g opacity="0.4" stroke="#7DD3FC" stroke-width="0.75">
+              <line x1="2" y1="2" x2="12" y2="2" />
+              <line x1="2" y1="2" x2="2" y2="12" />
+              <line x1="278" y1="2" x2="268" y2="2" />
+              <line x1="278" y1="2" x2="278" y2="12" />
+              <line x1="2" y1="198" x2="12" y2="198" />
+              <line x1="2" y1="198" x2="2" y2="188" />
+              <line x1="278" y1="198" x2="268" y2="198" />
+              <line x1="278" y1="198" x2="278" y2="188" />
+            </g>
+          </svg>
+        </div>
+
+        <!-- Info -->
+        <div class="project-info">
+          <p class="section-label" data-i18n="project.role">Rol · Dirección Tecnológica</p>
+          <h2 data-i18n="project.title">Tecnología al servicio del deporte</h2>
+          <p data-i18n="project.desc">
+            Lidero la infraestructura tecnológica del Club de Esgrima Cabudare: sitio web,
+            comunicaciones digitales, gestión de registros y presencia online. Un proyecto
+            donde la pasión de padre se une con la experiencia del ingeniero — apoyando a
+            nuestra comunidad de esgrimistas en Lara, Venezuela.
+          </p>
+          <div style="display:flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://clubesgrimacabudare.tepuy.site/" target="_blank" rel="noopener" class="btn btn-bronze"
+              id="cta-esgrima" data-i18n="project.cta">
+              🤺 Ver Sitio del Club
+            </a>
+            <a href="https://tepuy.site" target="_blank" rel="noopener" class="btn btn-secondary"
+              data-i18n="project.cta2">
+              🌐 TEPUY IT
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+     BRANDS
+     ============================================================ -->
+  <section id="brands" aria-labelledby="brands-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label" data-i18n="brands.label">Mis Marcas</p>
+        <h2 id="brands-heading" class="reveal" data-i18n="brands.heading">
+          Dos marcas. <span class="cyan">Un mismo sistema.</span>
+        </h2>
+      </div>
+
+      <div class="brands-grid">
+
+        <!-- TEPUY IT -->
+        <div class="brand-card brand-it reveal reveal-left">
+          <div class="brand-name">TEPUY IT</div>
+          <div class="brand-tagline" data-i18n="brand1.tagline">Infraestructura · Cloud · Ciberseguridad</div>
+          <p class="brand-desc" data-i18n="brand1.desc">
+            Empresa de tecnología especializada en infraestructura cloud, redes empresariales,
+            ciberseguridad y consultoría tecnológica. Llevamos soluciones robustas a negocios
+            de todos los tamaños en Venezuela y la región.
+          </p>
+          <div class="brand-links">
+            <a href="https://tepuy.site" target="_blank" rel="noopener" class="brand-link" id="link-tepuy">
+              🌐 tepuy.site
+            </a>
+            <a href="https://www.instagram.com/tepuy_it/" target="_blank" rel="noopener" class="brand-link"
+              id="link-ig-it">
+              📸 @tepuy_it
+            </a>
+            <a href="https://www.tiktok.com/@tepuy.site" target="_blank" rel="noopener" class="brand-link"
+              id="link-tiktok">
+              🎵 @tepuy.site
+            </a>
+          </div>
+        </div>
+
+        <!-- TEPUY GARAGE -->
+        <div class="brand-card brand-garage reveal reveal-right">
+          <div class="brand-name">TEPUY GARAGE</div>
+          <div class="brand-tagline" data-i18n="brand2.tagline">Tienda Virtual · Artículos Nuevos y con Historia</div>
+          <p class="brand-desc" data-i18n="brand2.desc">
+            Artículos nuevos y con historia: calidad que te acompaña y un pasado que inspira.
+            Encuentra lo que buscas con el valor que merece. Una tienda virtual donde cada
+            pieza tiene su propia historia y su propio valor.
+          </p>
+          <div class="brand-links">
+            <a href="https://www.instagram.com/tepuy_garage/" target="_blank" rel="noopener" class="brand-link"
+              id="link-ig-garage">
+              📸 @tepuy_garage
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+     CONTACT
+     ============================================================ -->
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="section-header" style="text-align: center;">
+        <p class="section-label" style="justify-content: center;" data-i18n="contact.label">Contacto</p>
+        <h2 id="contact-heading" class="reveal" data-i18n="contact.heading">
+          ¿Hablamos de <span class="cyan">tu sistema</span>?
+        </h2>
+        <p class="reveal delay-1" style="color: var(--text-dim); margin-top: 1rem; font-size: 1rem;"
+          data-i18n="contact.sub">
+          Agenda una cita o contáctame directamente. Estoy a un mensaje de distancia.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+
+        <a href="https://tepuy.site/whatsapp" target="_blank" rel="noopener" class="contact-card reveal delay-1"
+          id="contact-wa">
+          <span class="contact-icon">💬</span>
+          <span class="contact-label">WhatsApp</span>
+          <span class="contact-name" data-i18n="contact.wa">Escribir mensaje</span>
+        </a>
+
+        <a href="https://tepuy.site/agenda" target="_blank" rel="noopener" class="contact-card reveal delay-2"
+          id="contact-agenda">
+          <span class="contact-icon">📅</span>
+          <span class="contact-label" data-i18n="contact.calendar.label">Agenda</span>
+          <span class="contact-name" data-i18n="contact.calendar">Agendar una cita</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/figueredoalvarez/" target="_blank" rel="noopener"
+          class="contact-card reveal delay-3" id="contact-linkedin">
+          <span class="contact-icon">💼</span>
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-name">figueredoalvarez</span>
+        </a>
+
+        <a href="https://www.instagram.com/tepuy_it/" target="_blank" rel="noopener" class="contact-card reveal delay-4"
+          id="contact-ig-it">
+          <span class="contact-icon">📸</span>
+          <span class="contact-label">Instagram · IT</span>
+          <span class="contact-name">@tepuy_it</span>
+        </a>
+
+        <a href="https://www.tiktok.com/@tepuy.site" target="_blank" rel="noopener" class="contact-card reveal delay-5"
+          id="contact-tiktok">
+          <span class="contact-icon">🎵</span>
+          <span class="contact-label">TikTok</span>
+          <span class="contact-name">@tepuy.site</span>
+        </a>
+
+        <a href="https://www.instagram.com/tepuy_garage/" target="_blank" rel="noopener"
+          class="contact-card reveal delay-6" id="contact-ig-garage">
+          <span class="contact-icon">🔧</span>
+          <span class="contact-label">Instagram · Garage</span>
+          <span class="contact-name">@tepuy_garage</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+     FOOTER
+     ============================================================ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">IAM · TEPUY</div>
+      <div class="footer-copy" data-i18n="footer.copy">
+        © 2025 José M. Figueredo A. · iam.tepuy.site
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+     SCRIPTS
+     ============================================================ -->
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
